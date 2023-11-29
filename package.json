@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "bin": {
-    "aaa": "src/cli.js"
+    "hh": "src/cli.js"
   },
   "files": [
     "src"
