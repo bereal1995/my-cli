@@ -35,6 +35,20 @@ program
   });
 
 program
+  .command('show-todo')
+  .description('Show all todo things App')
+  .option('-t, --today', 'show today todos')
+  .action((options) => {
+    let url = 'ticktick://v1/show';
+    if (options.today) {
+      url += '?smartlist=today';
+    } else {
+      url += '?smartlist=all';
+    }
+    open(url);
+  });
+
+program
   .command('discord')
   .description('Send a message to my discord server')
   .argument('<message>', 'message to send')
